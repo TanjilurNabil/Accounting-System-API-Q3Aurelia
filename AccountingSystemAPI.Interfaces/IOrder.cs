@@ -13,5 +13,6 @@ namespace AccountingSystemAPI.Interfaces
         Task<List<Order>> GetAllOrder();
         Task<Order> EditOrder(int orderId, Order updateBody);
         Task<Order> GetOrderById(int orderId);
+        Task DeleteOrder(int orderId);
     }
 }

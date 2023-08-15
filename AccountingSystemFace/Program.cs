@@ -1,4 +1,6 @@
 using AccountingSystemAPI.DataAccess;
+using AccountingSystemAPI.Interfaces;
+using AccountingSystemAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +14,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
-var app = builder.Build();
+builder.Services.AddScoped<IOrder, OrderService>();
+builder.Services.AddHttpContextAccessor();
+    var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

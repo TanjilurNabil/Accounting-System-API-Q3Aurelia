@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AccountingSystemAPI.DataAccess\AccountingSystemAPI.DataAccess.csproj" />
+    <ProjectReference Include="..\AccountingSystemAPI.Interfaces\AccountingSystemAPI.Interfaces.csproj" />
+    <ProjectReference Include="..\AccountingSystemAPI.Services\AccountingSystemAPI.Services.csproj" />
   </ItemGroup>
 
 </Project>
