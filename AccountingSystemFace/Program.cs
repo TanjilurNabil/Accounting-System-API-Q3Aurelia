@@ -15,6 +15,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 builder.Services.AddScoped<IOrder, OrderService>();
+builder.Services.AddScoped<FinancialReportService>();
 builder.Services.AddHttpContextAccessor();
     var app = builder.Build();
 

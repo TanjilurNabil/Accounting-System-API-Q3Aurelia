@@ -41,6 +41,7 @@ namespace AccountingSystemAPI.Services
             {
                 data.ProductId = updateBody.ProductId;
                 data.SellingPrice = updateBody.SellingPrice;
+                data.SellingUnit = updateBody.SellingUnit;
                 if (_db.Entry(updateBody).State != EntityState.Unchanged)
                 {
                     _db.Update(updateBody);

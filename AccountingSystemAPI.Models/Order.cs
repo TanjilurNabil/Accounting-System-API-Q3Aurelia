@@ -12,6 +12,7 @@ namespace AccountingSystemAPI.Models
         [Key]
         public int OrderId { get; set; }
         public int? ProductId { get; set; }
+        public int SellingUnit { get; set; }
         public decimal? SellingPrice { get; set; }
         public DateTime OrderDate { get; set; } = DateTime.Now;
         public DateTime ShipDate { get; set; } = DateTime.Now.AddDays(3);
